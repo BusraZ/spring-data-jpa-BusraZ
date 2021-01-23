@@ -5,6 +5,8 @@ import com.hkarabakla.entities.User;
 import com.hkarabakla.repositories.UserRepo;
 import org.springframework.stereotype.Component;
 
+import java.util.Collections;
+
 @Component
 public class UserService {
 
@@ -18,14 +20,16 @@ public class UserService {
         User u = new User();
         u.setName("user");
 
+
         Address address = new Address();
-        address.setStreet("Gazo sokak");
+        address.setStreet("Gazoz sokak");
         address.setNumber("7");
         address.setCity("Istanbul");
 
         u.setAddress(address);
 
         repo.save(u);
+
 
         System.out.println(u.getId());
 
